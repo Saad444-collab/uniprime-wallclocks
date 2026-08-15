@@ -1,0 +1,75 @@
+services:
+  - type: web
+    name: uniprime-wallclocks
+    runtime: node
+    plan: free
+    buildCommand: cd server && npm install && cd ../client && npm install && npm run build
+    startCommand: cd server && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+        sync: false
+      - key: PORT
+        value: 5000
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CLIENT_URL
+        sync: false
+      - key: COOKIE_SAME_SITE
+        value: strict
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: MONGO_CLUSTER_1_URI
+        sync: false
+      - key: MONGO_CLUSTER_2_URI
+        sync: false
+      - key: MONGO_CLUSTER_3_URI
+        sync: false
+      - key: MONGO_CLUSTER_4_URI
+        sync: false
+      - key: MONGO_CLUSTER_5_URI
+        sync: false
+      - key: MONGO_CLUSTER_6_URI
+        sync: false
+      - key: MONGO_CLUSTER_7_URI
+        sync: false
+      - key: MONGO_CLUSTER_8_URI
+        sync: false
+      - key: MONGO_DB_NAME_CLUSTER_1
+        value: uniprime_wall_clocks_c1
+      - key: MONGO_DB_NAME_CLUSTER_2
+        value: uniprime_wall_clocks_c2
+      - key: MONGO_DB_NAME_CLUSTER_3
+        value: uniprime_wall_clocks_c3
+      - key: MONGO_DB_NAME_CLUSTER_4
+        value: uniprime_wall_clocks_c4
+      - key: MONGO_DB_NAME_CLUSTER_5
+        value: uniprime_wall_clocks_c5
+      - key: MONGO_DB_NAME_CLUSTER_6
+        value: uniprime_wall_clocks_c6
+      - key: MONGO_DB_NAME_CLUSTER_7
+        value: uniprime_wall_clocks_c7
+      - key: MONGO_DB_NAME_CLUSTER_8
+        value: uniprime_wall_clocks_c8
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: FROM_NAME
+        value: UniPrime Wall Clocks
+      - key: EASYPAYSA_ACCOUNT_NAME
+        sync: false
+      - key: EASYPAYSA_PHONE_NUMBER
+        sync: false
+      - key: TRUST_PROXY
+        value: "1"
