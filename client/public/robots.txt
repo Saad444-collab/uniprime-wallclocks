@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /profile
+Disallow: /login
+Disallow: /register
+Disallow: /wishlist
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /verify-email
+Disallow: /easypaisa-payment
+Disallow: /admin
+
+Sitemap: https://uniprimewallclocks.com/sitemap.xml

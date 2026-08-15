@@ -1,0 +1,40 @@
+# ===== Node =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Env files (NEVER commit secrets) =====
+.env
+.env.*
+!.env.example
+
+# ===== Build output =====
+dist/
+dist-ssr/
+build/
+*.local
+
+# ===== Uploads (user-generated media) =====
+uploads/*
+!uploads/.gitkeep
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== Local secrets / scratch =====
+or.txt
+.admin-new-pass.txt

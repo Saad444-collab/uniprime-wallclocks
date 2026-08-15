@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+node_modules/
+uploads/*
+*.log
+*.server-log.txt
+.server-log.txt
+logs/
+_check.js
+mkadmin.js
+.admin-new-pass.txt
+or.txt
+dist/
